@@ -1,0 +1,56 @@
+/*==============
+      CORES
+==============*/
+
+$color-b0: #2E3142;
+$color-b1: #BFC1C0;
+$color-b2: #EDEDED;
+
+$color-p0: #4F5E75;
+$color-e0: #EF8354;
+$color-w: #FFFFFF;
+
+/*==============
+   TIPOGRAFIA
+==============*/
+
+$font-prompt: 'Prompt', Arial, Helvetica, sans-serif;
+
+@mixin font($type) {
+   @if $type == title {
+      font-family: $font-prompt;
+      font-size: 2.4rem;
+      font-weight: 400;
+      font-style: normal;
+      text-transform: none;
+      line-height: 1;
+      letter-spacing: 0px;
+   }
+   @else if $type == text {
+      font-family: $font-prompt;
+      font-size: 1.8rem;
+      font-weight: 400;
+      font-style: normal;
+      text-transform: none;
+      line-height: 1.5;
+      letter-spacing: 0px;
+   }
+   @else if $type == btn {
+      font-family: $font-prompt;
+      font-size: 1.4rem;
+      font-weight: 700;
+      font-style: normal;
+      text-transform: none;
+      line-height: 1.2;
+      letter-spacing: 2px;
+   }
+   @else if $type == info {
+      font-family: $font-prompt;
+      font-size: 1.4rem;
+      font-weight: 400;
+      font-style: normal;
+      text-transform: none;
+      line-height: 1.2;
+      letter-spacing: -0.5px;
+   }
+}
