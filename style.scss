@@ -4,6 +4,7 @@
 body {
    background-color: $color-p0;
    padding: 20px;
+   transition: .6s;
    .dark-mode & {
       background-color: $color-b-1;
    }
@@ -17,6 +18,7 @@ body {
    margin: 120px auto 0px auto;
    box-shadow: 0px 5px 5px 0px rgba(42, 64, 98, .3),
                0px 10px 10px 0px rgba(42, 64, 98, .3);
+   transition: .6s;
    .dark-mode & {
       background-color: $color-p0;
       box-shadow: 0px 5px 5px 0px rgba(20, 37, 61, 0.3),
@@ -28,6 +30,7 @@ body {
    display: flex;
    justify-content: flex-end;
    margin-bottom: 30px;
+   transition: .6s;
    .color_scheme_modes-dark, .color_scheme_modes-light {
       width: 21px;
       height: 21px;
@@ -83,6 +86,7 @@ body {
    color: $color-b0;
    border-bottom: 2px solid $color-e0;
    margin: 0px auto 60px auto;
+   transition: .6s;
    @include font(title);
    .dark-mode & {
       color: $color-w;
@@ -92,6 +96,7 @@ body {
 .card-text {
    color: $color-b0;
    margin-bottom: 30px;
+   transition: .6s;
    @include font(text);
    &::before {
       content: '';
@@ -114,24 +119,35 @@ body {
    background-color: $color-b2;
    border-radius: 10px;
    margin-bottom: 15px;
+   transition: .6s;
    .input_field-btns {
       background-color: $color-b3;
       border-right: 2px solid $color-b0;
       border-top-left-radius: 10px;
-      border-bottom-left-radius: 10px;
+      border-bottom-left-radius: 10px;      
+      transition: .6s;
       cursor: pointer;
       .input_field-btns-plus {
          padding: 10px 15px 10px 15px;
+         border-top-left-radius: 10px;
          img {
             width: 19px;
             height: 19px;
          }
+         &:active {
+            background-color: $color-b2;
+         }
       }
       .input_field-btns-minus {
          padding: 10px 15px 15px 15px;
+         border-bottom-left-radius: 10px;
+
          img {
             width: 19px;
             height: 3px;
+         }
+         &:active {
+            background-color: $color-b2;
          }
       }
    }
@@ -145,6 +161,7 @@ body {
       -webkit-appearance: textfield;
       -moz-appearance: textfield;
            appearance: textfield;
+      transition: color .6s, background-color .6s;
       @include font(title);
       &:focus {
          box-shadow: 2px 2px 2px 0px rgba(0,0,0,.2);
@@ -158,6 +175,12 @@ body {
       background-color: $color-p-2;
       .input_field-btns {
          background-color: $color-p-1;
+         .input_field-btns-plus:active {
+            background-color: $color-p-2;
+         }
+         .input_field-btns-minus:active {
+            background-color: $color-p-2;
+         }
       }
       input {
          color: $color-w;
@@ -186,6 +209,7 @@ button {
    border-radius: 10px;
    box-shadow: 2px 2px 2px 0px rgba(0,0,0,.2);
    margin-bottom: 30px;
+   transition: .6s;
    @include font(text);
    .dark-mode & {
       color: $color-w;
@@ -198,6 +222,7 @@ button {
    grid-template-columns: 20px 1fr;
    gap: 15px;
    color: $color-b1;
+   transition: .6s;
    @include font(info);
    .info-icon {
       place-self: start;
